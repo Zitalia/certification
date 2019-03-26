@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Je m'ennuie.be</title>
+	<script type="text/javascript" src="lib/js/jquery.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.bundle.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="lib/css/bootstrap.css">
+	<script type="text/javascript" src="src/js/autoload.js"></script>
+    <link rel="icon"  href="src/img/logo2.gif">
+	<link rel="stylesheet" href="src/css/mystyle.css">
+</head>
+<body class="bg-dark text-white vasydepassepassalefou">
+	<form id="mainForm" method="GET" action="index.php">
+		<input id="routage" name="routage" type="hidden" value="index" />
+		<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#loginmodal" >
+			Le Coin V.I.P. 
+		</button>
+		<div class="text-center" id="allpage">
+			<div class="font-weight-bold" >
+				<div >
+					<h3 > Bienvenue <br />
+						Jeune crocodingo <br />
+						<span class="text-danger">tu t'ennuie ? </span><br />
+						allez rejoins nous !
+					</h3>
+					<div>
+						<ul class="list-group"><li><label for="invitpseudo" class="font-weight-light">Votre Pseudo :</label></li>
+							<li><input id="invitpseudo" type="text" name="invitpseudo" placeholder="Entrez un pseudo" ></li>
+							<span class="text-danger" id="pseudoinviterror"></span>
+							<li><label for="invitage" class="font-weight-light">   Votre Age :</label></li>
+							<li><input  id="invitage" type="number" name="invitage"  min=0 placeholder="Age"></li>
+							<span id="ageerrorinvit" class="text-danger"></span>
+							<li><label for="gender" class="font-weight-light">votre Sexe :</label><br />
+							<input type="radio" name="genderinvit" id="male" value="1" checked> <label class="radioselect" for="male">♂</label>
+							<input type="radio" name="genderinvit" id="female" value="2"> <label class="radioselect" for="female" >♀</label>
+							<input type="radio" name="genderinvit" id="crocodingo" value="3"> <label class="radioselect" for="crocodingo">♂♀</label></li>
+							<li><button type="button" class="btn btn-primary" id="submitvisit">Entrer</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{ include('modals/modalConnexion.html.twig') }}
+		{{ include('modals/modalInscription.html.twig') }}	
+	</form>
+</body>
+</html>

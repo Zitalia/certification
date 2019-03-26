@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Je m'ennuie.be</title>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script type="text/javascript" src="lib/js/jquery.js"></script>
+    <script type="text/javascript" src="lib/js/popper.min.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.bundle.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/mervick/emojionearea/dist/emojionearea.min.css">
+    <script type="text/javascript" src="vendor/mervick/emojionearea/dist/emojionearea.min.js"></script>
+	<link rel="stylesheet" href="src/css/mystyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="src/js/autoload.js"></script>
+    <link rel="icon"  href="src/img/logo2.gif">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <form id="mainForm" method="GET" action="index.php">
+        {% if route is defined %}
+            <input id="routage" name="routage" type="hidden" value="{{ route }}" />
+        {% else %}
+            <input id="routage" name="routage" type="hidden" value="accueil" />
+        {% endif %}
+        <div class="row toutelahauteur toutelalargeur margenone padenone">
+            <div class="col-md-2 row text-center padenone margenone " style="border-right:1px solid black;">
+                <div class="col-md-12 bg-Grisclair h-25" id="Hautgauche" style="border-bottom:1px solid black;">
+                    <div class="mx-auto h-80">
+                        {% block nav %}{% endblock %}
+                    </div>
+                    <div>
+                        <table>
+                            <tr><td class=" text-left"><i class="fas fa-cogs"></i></td>
+                                <td class=" text-right"><b id="sessionname"> {{ session.name }} </b></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-12 bg-unpeunoirmaispastropnoir h-75 text-white padenone" id="basgauche">
+                    {% block gaucheun %}
+                    {% endblock %}
+                    {% block gauchedeux %}
+                    {% endblock %}
+                </div>
+            </div>
+            {% block content %}{% endblock %}
+    </form>
+    </body>
+</html>

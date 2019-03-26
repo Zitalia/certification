@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Je m'ennuie.be</title>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script type="text/javascript" src="lib/js/jquery.js"></script>
+    <script type="text/javascript" src="lib/js/popper.min.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.bundle.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lib/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/mervick/emojionearea/dist/emojionearea.min.css">
+    <script type="text/javascript" src="vendor/mervick/emojionearea/dist/emojionearea.min.js"></script>
+	<link rel="stylesheet" href="src/css/mystylemobile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="src/js/autoload.js"></script>
+    <link rel="icon"  href="src/img/logo2.gif">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    {% block head %}{% endblock %}
+</head>
+<body class="bg-dark">
+    <form id="mainForm" method="GET" action="index.php">
+        {% if route is defined %}
+            <input id="routage" name="routage" type="hidden" value="{{ route }}" />
+        {% else %}
+            <input id="routage" name="routage" type="hidden" value="accueil" />
+        {% endif %}
+            <div class="toutelahauteur toutelalargeur margenone padenone ">
+                <div class="col-md-12 text-center padenone toutelalargeur " style="border-right:1px solid black" id="Hautgauche">
+                        
+                        <table>
+                            <tr><td class=" text-left"><i class="fas fa-cogs"></i></td>
+                                <td>{% block nav %}{% endblock %}</td>
+                                <td class=" text-right"><b id="sessionname"> {{ session.name }} </b></td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="row col-xs-12 bg-unpeunoirmaispastropnoir text-white padenone" id="basgauche">
+                    {% block gaucheun %}
+                    {% endblock %}
+                    {% block gauchedeux %}
+                    {% endblock %}
+                </div>
+                {% block content %}{% endblock %}
+                
+            
+    </form>
+    </body>
+</html>

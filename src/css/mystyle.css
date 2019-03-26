@@ -1,0 +1,515 @@
+/*Index*/
+#allpage {
+    min-height:100vh;
+    width:100vw;
+}
+
+#allpage h3 {
+    margin-bottom:3vh;
+    margin-top:20vh;
+}
+
+input {
+    text-align:center;
+}
+
+#invitage {
+    width:3%;
+}
+
+.radioselect {
+    font-size:25px;
+}
+
+#registeage {
+    width:10%;
+}
+/*masterpage*/
+#barregauche {
+    height:100vh;
+}
+
+#Hautgauche {
+	height:30%;
+    background-color:rgb(244, 241, 253);
+    background-image: url("../img/logo2.gif");
+    background-repeat: no-repeat;
+	background-size:cover;
+	align-content: center;
+	
+}
+
+#basgauche {
+    height:70%;
+}
+
+#bodymaster {
+    min-height:100vh;
+    min-width:100vh;
+}
+
+.jeveuxplusgrossepolice {
+    font-size: 0,01em;
+}
+
+/*Accueil*/
+
+.toutelahauteur {
+	height:100vh;
+	min-height:100vh;
+	max-height:100vh;
+}
+.toutelalargeur{
+	width:100vw;
+	max-width:100vw;
+	min-width:100vw;
+}
+.bg-Grisclair {
+	background-color: #B3B5B5; 
+}
+
+.bg-unpeunoirmaispastropnoir {
+	background-color:#393737;
+}
+
+.bg-transparent{
+    background-color:#FFFFFF;
+}
+.width-justify {
+	width:auto;
+}
+.element {
+	height:26vh;
+	width:32%;
+	border-radius:1vh;
+}
+
+.conteneur
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:3%;
+}
+.rondeletetmignon {
+	border-radius:1vh;
+}
+
+.justifyparlemilieu {
+	margin-left:34%;
+}
+
+.justifyparlehautcettefois {
+	padding-top:10%;
+}
+
+.margintop20{
+    margin-top:21%;
+}
+
+.margintop40{
+    margin-top:40%;
+}
+
+.margenone{
+	margin:0px;
+}
+
+.padenone{
+	padding:0px;
+}
+
+#entrezmessages{
+	height: 18vh;
+	width:100%;
+}
+
+.bienalignerpropresurlui {
+	align-content:center;
+	text-align: center;
+}
+
+#paramwheel {
+	width:40%;
+	height:40%;
+}
+
+table{
+	width:97%;
+	height:97%;
+	margin:1% auto auto auto;
+}
+
+table td{
+	width:33%;
+	margin-right:0%;
+}
+
+#jeux{
+	background-color:rgb(250, 11, 11);
+    background-image:url('../img/smash.png');
+	background-size: cover;
+}
+
+.elemjeuxprcss:hover{
+	-moz-box-shadow: 0px 0px 10px 10px #fe0000;
+-webkit-box-shadow: 0px 0px 10px 10px #fe0000;
+-o-box-shadow: 0px 0px 10px 10px #fe0000;
+box-shadow: 0px 0px 10px 10px #fe0000;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#fe0000, Direction=NaN, Strength=10);
+-moz-border-radius: 25px;
+-webkit-border-radius: 25px;
+border-radius: 25px;
+}
+
+#histoire {
+	background-color:rgb(124, 7, 124);
+    background-image:url('../img/creepypasta4.png');
+    background-size: cover;
+}
+.elemhisoireprcss:hover {
+	-moz-box-shadow: 0px 0px 10px 10px #6434fc;
+	-webkit-box-shadow: 0px 0px 10px 10px #6434fc;
+	-o-box-shadow: 0px 0px 10px 10px #6434fc;
+	box-shadow: 0px 0px 10px 10px #6434fc;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#6434fc, Direction=NaN, Strength=10);
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+}
+
+#video {
+	background-color:rgb(11, 11, 243);
+	color:white;
+    background-image:url('../img/video2.png');
+    background-size: cover;
+}
+
+.elemvideoprcss:hover {
+	-moz-box-shadow: 0px 0px 10px 10px #38fff8;
+	-webkit-box-shadow: 0px 0px 10px 10px #38fff8;
+	-o-box-shadow: 0px 0px 10px 10px #38fff8;
+	box-shadow: 0px 0px 10px 10px #38fff8;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#38fff8, Direction=NaN, Strength=10);
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+}
+
+#forum {
+    background-color:rgb(7, 124, 7);
+    background-image: url("../img/forum.png");
+	background-size: cover ;
+	background-position-y: center;
+}
+
+.elemforumprcss:hover {
+	-moz-box-shadow: 0px 0px 10px 10px #34ff34;
+	-webkit-box-shadow: 0px 0px 10px 10px #34ff34;
+	-o-box-shadow: 0px 0px 10px 10px #34ff34;
+	box-shadow: 0px 0px 10px 10px #34ff34;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#34ff34, Direction=NaN, Strength=10);
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+}
+
+#chat {
+    background-color:#c67d15;
+    background-image: url("../img/chat.png");
+    background-size: cover;
+}
+
+.elemchatprcss:hover {
+	-moz-box-shadow: 0px 0px 10px 10px #f8ff00;
+	-webkit-box-shadow: 0px 0px 10px 10px #f8ff00;
+	-o-box-shadow: 0px 0px 10px 10px #f8ff00;
+	box-shadow: 0px 0px 10px 10px #f8ff00;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#f8ff00, Direction=NaN, Strength=10);
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+}
+
+ul {
+	list-style-type: none; 
+}
+
+/* New css */
+
+
+.margmid {
+    margin:auto;
+}
+
+.h-10{
+	height:10% !important;
+}
+
+#embedjeuselected {
+	height:90%;
+	width:100%;
+	border:2px solid black;
+	border-radius:20px 20px ;
+	background-image: url("../img/fondfonlatulipe.jpg");
+}
+
+.bordurusmimosa {
+	border-radius:20px 20px;
+}
+
+.bordurusmimolette {
+	border-radius:16px 16px;
+}
+
+.Margimargo {
+	padding: 30px;
+}
+
+.carddeckkk {
+	height:90%;
+	width:90%;
+	margin:auto;
+	padding:auto;
+}
+.carddeckkkpourledessous {
+	height:90%;
+	width:90%;
+	margin:auto;
+	padding:auto;
+}
+.cardaarrangerbakde{
+	height:95%;
+	margin-top:0.75em;
+}
+.contenuedecartelalalerje{
+	padding:4%;
+	padding-top:1%;
+}
+.carddeckkkselectvideo{
+	height:90%;
+	width:90%;
+	margin:auto;
+	padding-bottom:5%;
+}
+.pad1percent{
+	padding-top: 1%;
+}
+
+.videonamecardselectedede{
+	max-height:2.3em;
+	overflow:hidden;
+}
+
+#namejeucardselected{
+	min-height:2em;
+	max-height:2.5em;
+	overflow:hidden;
+}
+.videocardnamelde{
+	min-height:2em;
+	max-height:2.5em;
+	overflow:hidden;
+
+}
+
+.cartetropstylevideotoutbleu:hover{
+-moz-box-shadow: 0px 0px 10px 10px #38fff8;
+-webkit-box-shadow: 0px 0px 10px 10px #38fff8;
+-o-box-shadow: 0px 0px 10px 10px #38fff8;
+box-shadow: 0px 0px 10px 10px #38fff8;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#38fff8, Direction=NaN, Strength=10);
+-moz-border-radius: 25px;
+-webkit-border-radius: 25px;
+border-radius: 25px;
+}
+
+.tourstylerinlinde{
+	-moz-box-shadow: 0px 0px 10px 10px #3867ff;
+-webkit-box-shadow: 0px 0px 10px 10px #38fff8;
+-o-box-shadow: 0px 0px 10px 10px #38fff8;
+box-shadow: 0px 0px 10px 10px #38fff8;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#38fff8, Direction=NaN, Strength=10);
+-moz-border-radius: 25px;
+-webkit-border-radius: 25px;
+border-radius: 25px;
+}
+
+.imgcooca{
+
+    background-image:url('https://static.miniclipcdn.com/content/game-icons/small/cartapult_70x59.jpg');
+}
+
+.textrouge {
+	color:rgb(250, 11, 11);
+}
+
+iframe {
+	border:0px;
+}
+
+.policeepee {
+	font-weight:800;
+}
+
+.miniaturebandeau {
+	float:left;
+}
+#cardcontent {
+	height:12vh;
+	border:2px groove black;
+}
+
+.borderblack {
+	border:2px groove black;
+	border-radius:20px 20px;
+	box-shadow: 1px 1px 3px 5px black;
+}
+
+.textbleu {
+	color:#0066ff !important ;
+}
+.textbleupasimportant {
+	color:#0066ff  ;
+}
+
+.textnoir {
+	color:#000000  ;
+}
+
+.textblanc {
+	color:#FFFF  ;
+}
+
+.bg-bleu {
+	background-color: #0066ff;
+}
+.bgviole {
+	background-color: purple;
+}
+.textviole {
+	color:purple;
+}
+
+.trianglegauchebleu{
+	width:1px;
+	height:1px;
+	border:1px solid #069;
+	border-color:transparent #069 transparent transparent;
+	border-width:9vh;
+    margin-top: 2.5%;
+}
+
+.h-80 {
+	height: 80% !important;
+  }
+
+.h33vasymonchampion{
+	height:33vh;
+}
+
+.triangledroitebleu{
+	width:1px;
+	height:1px;
+	border:1px solid #069;
+	border-color:transparent transparent transparent #069;
+	border-width:9vh;
+    margin-top: 2.5%;
+}
+
+.trianglegaucherouge{
+	width:1px;
+	height:1px;
+	border:1px solid #990000;
+	border-color:transparent #990000 transparent transparent;
+	border-width:9vh;
+    margin-top: 2.5%;
+}
+
+.triangledroiterouge{
+	width:1px;
+	height:1px;
+	border:1px solid #990000;
+	border-color:transparent transparent transparent #990000;
+	border-width:9vh;
+    margin-top: 2.5%;
+}
+
+.alignezverslemilieu {
+	margin-top:2vh;
+}
+
+.decostoryquotedtc{
+	border-radius: 4px;
+    font-weight: 700;
+    padding: 0 4px;
+}
+
+.policeunpeuepee {
+	font-weight:700;
+}
+
+.chataffichage {
+	height:90%;
+	width:90%;
+	margin:auto;
+	padding-top:6vh;
+	padding-left:6vh;
+	border-radius:20px;
+	overflow:auto;
+	overflow-x:hidden;
+}
+.chatzonetrext {
+	height:90%;
+	width:90%;
+	margin:auto;
+	margin-top:-2%;
+	padding:auto;
+	border-radius:20px;
+}
+
+#sendmessages{
+	height:5.5em;
+	width:10vw;
+}
+
+.paddauto {
+	padding-top:3%;
+}
+
+.padd1vh {
+	padding-top:2vh;
+}
+.bgorange {
+	background-color: #ffc107 ;
+}
+
+.textorange {
+	color:#ffc107;
+}
+
+.textver {
+	color:green;
+}
+
+#imgforumtravaux {
+	background-image: url('../img/travaux.png');
+	background-repeat:no-repeat;
+}
+
+.vasydepassepassalefou {
+	max-height: 100vh;
+    max-width: 100vh;
+    overflow: hidden;
+}
+
+a{
+	color:#000;
+	text-decoration: none;
+	background-color: none;
+}
+a:hover{
+	color:#FFF;
+	text-decoration: none;
+	background-color: none;
+}

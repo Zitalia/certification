@@ -1,0 +1,7 @@
+{
+    "require": {
+        "twig/twig": "^2.0",
+        "mervick/emojionearea": "^3.0.0",
+        "symfony/var-dumper": "^4.2"
+    }
+}

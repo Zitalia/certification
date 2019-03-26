@@ -1,0 +1,108 @@
+{% extends ismobile ? "Mastermobile.html.twig" : "Masterpage.html.twig" %}
+
+{% block head %}{% endblock %}
+
+{% block nav %}
+	<select id="menuderoulant" name="menuderoulant" class="bg-transparent border-0 font-weight-bolder width-justify margintop20">
+			<option value="accueil" selected>Accueil</option>
+			<option value="jeux">Jeux</option>
+			<option value="videos">Vidéos</option>
+			<option value="creepyPasta">CreepyPasta</option>
+			<option value="forum">Forum</option>
+			<option value="chat">Chat</option>
+	</select>
+{% endblock %}
+
+{% block gaucheun %}
+<div class="h-50 justifyparlehautcettefois col-xs-6 col-md-12">
+	<h4>LeaderBoard :</h4>
+	<ul class="justifyparlehautcettefois padenone">
+		{% for user in leados %}
+		{% set loopIndex = loop.index %}
+{% if user.sexe == "1" %}
+		{% set SEXECRIT = "Homme" %}
+{% elseif user.sexe == "2" %}
+		{% set SEXECRIT = "Femme" %}
+{% elseif user.sexe == "3" %}
+		{% set SEXECRIT = "Indéfinis" %}
+{% endif %}
+<li>
+	<a href="#" data-html="true" class="text-light" data-toggle="tooltip" data-placement="right" title='
+	<div class="Tooltipheader">
+			<p class="text-left"><b> {{ user.name|upper }} </b><p>
+		</div>
+		<div class="TooltipContent text-left">
+			<ul>
+				<li> Sexe: {{ SEXECRIT }}</li><br />
+				<li> Age : {{ user.age }} </li><br />
+				<li> Membre depuis le : {{ user.regdate|slice(start, 10) }} </li><br />
+				<li> Côte : {{ user.avis }} </li>
+			</ul>
+		</div>
+	'>
+	{{user.name}}
+	</a>
+</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}
+
+
+{% block gauchedeux %}
+<div class="h-50 justifyparlehautcettefois col-md-12 col-xs-6">
+	<h4>En ligne : </h4>
+	<ul class=" padenone">
+		{% for user in ounlaine %}
+		{% set loopIndex = loop.index %}
+{% if user.sexe == "1" %}
+		{% set SEXECRIT = "Homme" %}
+{% elseif user.sexe == "2" %}
+		{% set SEXECRIT = "Femme" %}
+{% elseif user.sexe == "3" %}
+		{% set SEXECRIT = "Indéfinis" %}
+{% endif %}
+<li>
+	<a href="#" data-html="true" class="text-light" data-toggle="tooltip" data-placement="right" title='
+	<div class="Tooltipheader">
+			<p class="text-left"><b> {{ user.name|upper }} </b><p>
+		</div>
+		<div class="TooltipContent text-left">
+			<ul>
+				<li> Sexe: {{ SEXECRIT }}</li><br />
+				<li> Age : {{ user.age }} </li><br />
+				<li> Membre depuis le : {{ user.regdate|slice(start, 10) }} </li><br />
+				<li> Côte : {{ user.avis }} </li>
+			</ul>
+		</div>
+	'>
+	{{user.name}}
+	</a>
+</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}
+
+
+{% block content %}
+	<div class="col-sm-12 col-md-10 bg-dark padenone margenone " id ="lescategorille">
+		<table>
+			<tr class="retournetoiformobile">
+				<td class="element elemjeuxprcss" id="jeux"><h2 class="bienalignerpropresurlui">Les<br />Jeux</h2></td>
+				<td></td>
+				<td class="element elemhisoireprcss" id="histoire"><h2 class="bienalignerpropresurlui">Un peu de Lecture</h2></td>
+			</tr>
+			<tr class="retournetoiformobile">
+				<td></td>
+				<td class="element justifyparlemilieu elemvideoprcss" id="video"><h2 class="bienalignerpropresurlui">Vidéos</h2></td>
+				<td></td>
+			</tr>
+			<tr class="retournetoiformobile">
+				<td class="element elemforumprcss" id="forum"><h2  class="bienalignerpropresurlui">Forum</h2></td>
+				<td></td>
+				<td class="element elemchatprcss" id="chat"><h2  class="bienalignerpropresurlui">Chat</h2></td>
+			</tr>
+		</table>
+	</div>
+{% endblock %}

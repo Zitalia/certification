@@ -1,0 +1,80 @@
+{% extends ismobile ? "Mastermobile.html.twig" : "Masterpage.html.twig" %}
+
+{% block head %}{% endblock %}
+
+{% block nav %}
+	<select id="menuderoulant" name="menuderoulant" class="bg-transparent border-0 font-weight-bolder width-justify margintop20">
+			<option value="accueil">Accueil</option>
+			<option value="jeux">Jeux</option>
+			<option value="videos" selected>Vidéos</option>
+			<option value="creepyPasta">CreepyPasta</option>
+			<option value="forum">Forum</option>
+			<option value="chat">Chat</option>
+	</select>
+{% endblock %}
+
+{% block gaucheun %}
+<div class="h-50 justifyparlehautcettefois textbleu col-sm-6 col-md-12">
+	<h4>Vidéo de la semaine :</h4>
+	<ul class="justifyparlehautcettefois padenone">
+		{% for video in vodday %}
+        <a href="index.php?routage=videoselected&menuderoulant=videoselected&videoId={{ video.id }} ">
+        <li>{{video.authorname}}</li>
+        <li>{{video.name}}</li>
+        </a>
+        {% endfor %}
+	</ul>
+</div>
+{% endblock %}
+
+
+{% block gauchedeux %}
+<div class="h-50 justifyparlehautcettefois textbleu col-sm-6 col-md-12" style="overflow:hidden">
+	<h4>Vidéo les mieux noté : </h4>
+	<ul class=" padenone">
+    {% for video in miniavid %}
+    <a href="index.php?routage=videoselected&menuderoulant=accueil&videoId={{ video.id }} ">
+    <li>{{video.name}}</li>
+    <li>{{video.authorname}}</li>
+    </a>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="col-xs-12 col-md-10 bg-dark margenone padenone">
+    <div class=" col-md-12 h33vasymonchampion margmid etblabliblablou">
+        <div class="card-deck carddeckkk" >
+        {% set i = 0 %}
+        {% for video in miniavidxdouze %}
+            {% if j < 12 %}
+                {% set j = j + 1 %}
+                <div class="card bg-bleu bordurusmimosa margmid cartetropstylevideotoutbleu">
+                    <div class="card-body policeepee">
+                        <h5 class="bg-light bordurusmimosa text-center textbleu videonamecardselectedede" >{{video.authorname}} - {{video.name}}</h5>
+                        <div class="bg-white textbleu bordurusmimosa" id="cardcontent">
+                            <a href="index.php?routage=videoselected&menuderoulant=accueil&videoId={{ video.id }} ">
+                                <img src="{{video.miniaimg}}" alt="miniature" height="100%" width="100%" class="miniaturebandeau bordurusmimolette">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+                {% set i = i + 1 %}
+                {% if i == 4 and j != 12 %}
+                    {% set i = 0 %}
+                        </div>
+                    </div>
+                    <div class="col-md-12 h33vasymonchampion margmid etblabliblablou">
+                        <div class="card-deck carddeckkk" >
+                {% endif %}
+		{% endfor %}
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
+
+

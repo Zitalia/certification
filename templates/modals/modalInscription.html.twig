@@ -1,0 +1,39 @@
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalregisterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered text-center " role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-danger"  style="border-color:purple">
+                <h5 class="modal-title" id="registerModalLabel">Incription :</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-dark text-white" style="font-size:18px;">
+                <ul class="list-group text-white" ><li><label for="registerpseudo" class="text-left">Votre Pseudo :</label></li>
+                    <li><input id="registerpseudo" type="text" class="align-center text-center" name="registerpseudo" placeholder="Entrez un pseudo"></li>
+                    <span id="erreurpseudo" class="text-danger"></span>
+                    <li><label for="registerpassword1">mot-de-passe : </label></li>
+                    <li><input type="password" name="registerpassword1" class="form-control" id="registerpassword1" placeholder="Entrer un mot de passe"></li>
+                    <span id="erreurpassword" class="text-danger"></span>
+                    <li><label for="registerpassword2">Mot-de-passe  :</label></li>
+                    <li><input type="password" class="form-control" name="registerpassword2" id="registerpassword2" placeholder="Confirmez votre mot de passe"></li>
+                    <span id="erreurpassword2" class="text-danger"></span>
+                    <li><label for="registemail" class="text-left">   Votre Mail :</label></li>
+                    <li><input  id="registemail" type="email" name="registemail" placeholder="Adresse e-mail" class=" text-center" ></li>
+                    <span id="erreurmail" class="text-danger"></span>
+                    <li><label for="registeage" class="text-left">   Votre age :</label></li>
+                    <li><input  id="registeage" min=0 type="number" name="registeage" placeholder="Age" class=" text-center" ></li>
+                    <span id="erreurage" class="text-danger"></span>
+                    <li><label for="gender" class="text-left">Sexe :</label><br />
+                    <input type="radio" name="gender" id="malesubscribe" value="1" checked> <label class="radioselect" for="malesubscribe" class="font-weight-bold">♂</label>
+                    <input type="radio" name="gender" id="femalesubscribe" value="2"> <label class="radioselect" for="femalesubscribe" class="font-weight-bold">♀</label>
+                    <input type="radio" name="gender" id="crocodingosubscribe" value="3"> <label class="radioselect" for="crocodingosubscribe" class="font-weight-bold">♂♀</label>
+                    </li>			
+                </ul>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button id="btnInscription" type="button" class="btn btn-primary">S'inscrire !</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermez</button>
+            </div>
+        </div>
+    </div>
+</div>

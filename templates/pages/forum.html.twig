@@ -1,0 +1,38 @@
+{% extends ismobile ? "Mastermobile.html.twig" : "Masterpage.html.twig" %}
+
+{% block head %}{% endblock %}
+
+{% block nav %}
+	<select id="menuderoulant" name="menuderoulant" class="bg-transparent border-0 font-weight-bolder width-justify margintop20">
+			<option value="accueil">Accueil</option>
+			<option value="jeux">Jeux</option>
+			<option value="videos" >Vidéos</option>
+			<option value="creepyPasta">CreepyPasta</option>
+			<option value="forum"  selected>Forum</option>
+			<option value="chat">Chat</option>
+	</select>
+{% endblock %}
+
+{% block gaucheun %}
+<div class="h-50 justifyparlehautcettefois textver col-sm-6 col-md-12">
+	<h4>En Construction </h4>
+	
+</div>
+{% endblock %}
+
+
+{% block gauchedeux %}
+<div class="h-50 justifyparlehautcettefois textver col-sm-6 col-md-12">
+	<h4>En Construction </h4>
+	
+    </ul>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="col-md-10 bg-dark margenone padenone metmoitoutsaaumilieulepote" id="forumwaitingidcontent">
+	<div id="imgforumtravaux" class="col-md-10 margmid h-100">
+    </div>
+</div>
+{% endblock %}

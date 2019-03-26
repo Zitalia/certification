@@ -1,0 +1,101 @@
+{% extends ismobile ? "Mastermobile.html.twig" : "Masterpage.html.twig" %}
+
+{% block head %}{% endblock %}
+
+{% block nav %}
+	<select id="menuderoulant" name="menuderoulant" class="bg-transparent border-0 font-weight-bolder width-justify margintop20">
+			<option value="accueil">Accueil</option>
+			<option value="jeux">Jeux</option>
+			<option value="videos">Vidéos</option>
+			<option value="creepyPasta" selected>CreepyPasta</option>
+			<option value="forum">Forum</option>
+			<option value="chat">Chat</option>
+	</select>
+{% endblock %}
+
+
+
+{% block gaucheun %}
+<div class="h-50 justifyparlehautcettefois textviole col-sm-6 col-md-12">
+	<h4>Meilleurs histoires : </h4>
+	<ul class=" padenone">
+    {% for histoire in recuptophistoire %}
+    <a href="#storyModal" role="button" data-toggle ="modal" class="storylinkgjgj" data-cequejeveux="{{histoire.id}}">
+    <li>{{histoire.name}}</li>
+    </a>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+
+{% block gauchedeux %}
+
+<div class="h-50 justifyparlehautcettefois textviole col-sm-6 col-md-12">
+	<h4>Les lecteurs phare : </h4>
+	<ul class=" padenone">
+
+{% for user in recuptoplecteur %}
+    {% set loopIndex = loop.index %}
+    {% if user.sexe == "1" %}
+            {% set SEXECRIT = "Homme" %}
+    {% elseif user.sexe == "2" %}
+            {% set SEXECRIT = "Femme" %}
+    {% elseif user.sexe == "3" %}
+            {% set SEXECRIT = "Indéfinis" %}
+    {% endif %}
+    <li>
+        <a href="#" data-html="true" class="" data-toggle="tooltip" data-placement="right" title='
+        <div class="Tooltipheader">
+                <p class="textviole text-left"><b> {{ user.name|upper }} </b><p>
+            </div>
+            <div class="TooltipContent text-left">
+                <ul>
+                    <li> Sexe: {{ SEXECRIT }}</li><br />
+                    <li> Age : {{ user.age }} </li><br />
+                    <li> Membre depuis le : {{ user.regdate|slice(start, 10) }} </li><br />
+                    <li> Côte : {{ user.avis }} </li>
+                </ul>
+            </div>
+        '>
+        {{user.name}}
+        </a>
+    </li>
+{% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="col-md-10 bg-dark margenone padenone">
+    <div class="col-md-12 h33vasymonchampion margmid etblabliblablou">
+		<div class="card-deck carddeckkk" >
+			{% set i = 0 %}
+			{% for histoire in Storyrandom %}
+                {% if j < 12 %}
+                    {% set j = j + 1 %}
+                    <div class="card bgviole bordurusmimosa margmid cartetropstylevideotoutbleu">
+                        <div class="card-body policeepee">
+                            <a href="#storyModal" role="button" data-toggle ="modal" class="storylinkgjgj" data-cequejeveux="{{histoire.id}}">
+                                <h5 class="bg-light bordurusmimosa text-center textviole videocardnamelde">{{histoire.name}} - <span class="font-italic h6">{{histoire.authorname}} </span></h5>
+                                <div class="bg-white textviole bordurusmimosa" id="cardcontent">
+                                    <img src="{{histoire.miniaimg}}" alt="miniature" height="100%" width="100%" class="miniaturebandeau bordurusmimosa">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+                {% set i = i + 1 %}
+                {% if i == 4 and j != 12 %}
+                    {% set i = 0 %}
+                        </div>
+                    </div>
+                    <div class="col-md-12 h33vasymonchampion margmid etblabliblablou">
+                        <div class="card-deck carddeckkk" >
+                {% endif %}
+		{% endfor %}
+        </div>
+	</div>
+</div>
+{{ include('modals/modalStory.html.twig') }}
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends ismobile ? "Mastermobile.html.twig" : "Masterpage.html.twig" %}
+
+{% block head %}{% endblock %}
+
+{% block nav %}
+	<select id="menuderoulant" name="menuderoulant" class="bg-transparent border-0 font-weight-bolder width-justify margintop20">
+			<option value="accueil">Accueil</option>
+			<option value="jeux">Jeux</option>
+			<option value="videos" selected>Vidéos</option>
+			<option value="creepyPasta">CreepyPasta</option>
+			<option value="forum">Forum</option>
+			<option value="chat">Chat</option>
+	</select>
+{% endblock %}
+
+{% block gaucheun %}
+<div class="h-50 justifyparlehautcettefois textbleu col-sm-6 col-md-12">
+	<h4>Vidéo de la semaine :</h4>
+	<ul class="justifyparlehautcettefois padenone">
+	{% for video in vodday %}
+        <a href="index.php?routage=videoselected&menuderoulant=accueil&videoId={{ video.id }} ">
+            <li>{{video.authorname}}</li>
+            <li>{{video.name}}</li>
+        </a>
+    {% endfor %}
+	</ul>
+</div>
+{% endblock %}
+
+
+{% block gauchedeux %}
+<div class="h-50 justifyparlehautcettefois textbleu col-sm-6 col-md-12" style="overflow:hidden">
+	<h4>Vidéo les mieux noté : </h4>
+	<ul class="textbleu padenone">
+    {% for video in miniavid %}
+    <a href="index.php?routage=videoselected&menuderoulant=accueil&videoId={{ video.id }} ">
+    <li>{{video.name}}</li>
+    <li>{{video.authorname}}</li>
+    </a>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+
+{% block content %}
+        <div class="col-md-10 bg-dark margenone padenone toutelahauteur" style="overflow:hidden">
+            <div id="incrustation" class="col-md-11 h-75  margmid" >
+                <div class="h-10 textbleu">
+                {% for video in urlVideo %}
+                    <h2 class="pad1percent">{{video.authorname}} - {{video.name}}</h2>
+                </div>
+                <div id="embedjeuselected" class="text-center">
+                  <iframe src="{{video.link}}" width="80%" height="90%" style="margin-top:2vh;" allowfullscreen="allowfullscreen"></iframe>
+                  <div class="align-right policeepee">
+                    <a href="#"><i id="vidlike" class="fas fa-thumbs-up textbleupasimportant" data-idvid="{{video.id}}"></i></a>    
+                    <a href="#"><i id="viddislike" class="fas fa-thumbs-down textblanc" data-idvidkf="{{video.id}}"></i></a>
+                  </div>
+                  {% endfor %}
+                </div>
+            </div>
+            <div id="bandeaudfilant" class="col-md-11 h-25  margmid" >
+                <div class="card-deck carddeckkkpourledessous">
+                    <div class="trianglegauchebleu ">
+                    </div>
+                    {% for video in vidrandom %}
+                    <div class="card bg-bleu bordurusmimosa margmid cartetropstylevideotoutbleu cardaarrangerbakde">
+                    <a href="index.php?routage=videoselected&menuderoulant=accueil&videoId={{ video.id }} ">
+                        <div class="card-body policeepee contenuedecartelalalerje">
+                            <h5 class="bg-light bordurusmimosa text-center textbleu videonamecardselectedede">{{video.authorname}} - {{video.name}}</h5>
+                            <div class="bg-white textbleu bordurusmimosa" id="cardcontent">
+                                <img src="{{video.miniaimg}}" alt="miniature" height="100%" width="100%" class="miniaturebandeau bordurusmimolette">
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                    <div class="triangledroitebleu ">
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+

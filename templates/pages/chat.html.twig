@@ -1,0 +1,112 @@
+
+{% extends ismobile ? "Mastermobile.html.twig" : "Masterpage.html.twig" %}
+
+{% block head %}{% endblock %}
+
+{% block nav %}
+	<select id="menuderoulant" name="menuderoulant" class="bg-transparent border-0 font-weight-bolder width-justify margintop20">
+			<option value="accueil">Accueil</option>
+			<option value="jeux">Jeux</option>
+			<option value="videos" >Vidéos</option>
+			<option value="creepyPasta">CreepyPasta</option>
+			<option value="forum">Forum</option>
+			<option value="chat"  selected>Chat</option>
+	</select>
+{% endblock %}
+
+{% block gaucheun %}
+<div class="h-50 justifyparlehautcettefois textorange col-sm-6 col-md-12">
+	<h4>Les T'chatteur de l'extreme : </h4>
+	<ul class="padenone">
+    {% for user in plusactifs %}
+     {% set loopIndex = loop.index %}
+    {% if user.sexe == "1" %}
+            {% set SEXECRIT = "Homme" %}
+    {% elseif user.sexe == "2" %}
+            {% set SEXECRIT = "Femme" %}
+    {% elseif user.sexe == "3" %}
+            {% set SEXECRIT = "Indéfinis" %}
+    {% endif %}
+    <li>
+        <a href="#" data-html="true" class="textorange" data-toggle="tooltip" data-placement="right"  title='
+        <div class="Tooltipheader">
+                <p class="textorange text-left"><b> {{ user.name|upper }} </b><p>
+            </div>
+            <div class="TooltipContent text-left">
+                <ul>
+                    <li> Sexe: {{ SEXECRIT }}</li><br />
+                    <li> Age : {{ user.age }} </li><br />
+                    <li> Membre depuis le : {{ user.regdate|slice(start, 10) }} </li><br />
+                    <li> Côte : {{ user.avis }} </li>
+                </ul>
+            </div>
+        '>
+        {{user.name}}
+        </a>
+    </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+
+{% block gauchedeux %}
+<div class="h-50 justifyparlehautcettefois textorange col-sm-6 col-md-12">
+	<h4>Les T'chatteur en ligne : </h4>
+	<ul class="padenone">
+    {% for user in plusaimees %}
+    {% set loopIndex = loop.index %}
+{% if user.sexe == "1" %}
+		{% set SEXECRIT = "Homme" %}
+{% elseif user.sexe == "2" %}
+		{% set SEXECRIT = "Femme" %}
+{% elseif user.sexe == "3" %}
+		{% set SEXECRIT = "Indéfinis" %}
+{% endif %}
+<li>
+	<a href="#" data-html="true" class="textorange" data-toggle="tooltip" data-placement="right" title='
+	<div class="Tooltipheader textorange">
+			<p class="textorange text-left"><b> {{ user.name|upper }} </b><p>
+		</div>
+		<div class="TooltipContent text-left">
+			<ul>
+				<li> Sexe: {{ SEXECRIT }}</li><br />
+				<li> Age : {{ user.age }} </li><br />
+				<li> Membre depuis le : {{ user.regdate|slice(start, 10) }} </li><br />
+				<li> Côte : {{ user.avis }} </li>
+			</ul>
+		</div>
+	'>
+	{{user.name}}
+	</a>
+</li>
+{% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="col-xs-12 col-md-10 bg-dark margenone padenone toutelahauteur metmoitoutsaaumilieulepote">
+	<div class="h-75 paddauto lesbonsessageshein">
+		<div class="bg-warning chataffichage " id="chataffichage">
+		{% for messages in recupmessage %}
+		<p data-id="{{messages.0}}"> <u>{{ messages.date|slice(start, 10) }}</u> <b>{{messages.authorid}} :</b> {{messages.content}} </p>
+		{% endfor %}
+		</div>
+	</div>	
+	<div class="h-25" id="chatzonetrext">
+		<div class="bg-warning chatzonetrext row">
+			<div class="col-md-10 padd1vh" id="iofoifhzofzjio">
+				<textarea  name="entrezmessages" id="entrezmessages" placeholder="Entrez votre message ici" onFocus="emojioneArea()"></textarea>
+			<script>
+			$("#entrezmessages").emojioneArea();
+			</script>
+			</div>
+			<div class="col-md-2 margmid laclassadallas">
+				<button type="button" class="bg-light"  name="sendmessages" id="sendmessages" >Entrez <br /> votre <br /> Message</button>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
