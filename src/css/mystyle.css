@@ -308,9 +308,18 @@ ul {
 }
 .videocardnamelde{
 	min-height:2em;
-	max-height:2.5em;
+	max-height:2.5em !important;
 	overflow:hidden;
+}
+.videocardnameldemort{
+	min-height:1em;
+	max-height:2em !important;
+	overflow:hidden;
+	height:2em;
+}
 
+.hiddendennaruto{
+	overflow:hidden;
 }
 
 .cartetropstylevideotoutbleu:hover{

@@ -33,7 +33,6 @@ if(document.getElementById('routage').value == "chat" ){
                 }
             });
         }
-        message = "";
     }
 
 
@@ -44,7 +43,7 @@ if(document.getElementById('routage').value == "chat" ){
 
     function entrertosend(event){
         if (event.key === "Enter") {
-            // event.preventDefault();
+            event.preventDefault();
             
         }
     }

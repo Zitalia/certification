@@ -1,7 +1,7 @@
 <?php
 include('../../Modele/modele.php');
 
-$message = htmlspecialchars($_GET['message']);
+$message = $_GET['message'];
 $nameuser = htmlspecialchars($_SESSION['name']);
 $date = date('Y-m-d');
 

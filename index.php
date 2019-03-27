@@ -273,7 +273,8 @@ function register(){
 	&& isset($registeage)
 	&& isset($gender) ) { 
 		if (strlen($registerpseudo) > 3 && strlen($registerpassword1) >= 6) {
-			insertuser($registerpseudo, $registerpassword1, $registemail, $registeage, $gender, $timiming);
+			$hashedpass = password_hash($registerpassword1, PASSWORD_DEFAULT);
+			insertuser($registerpseudo, $hashedpass, $registemail, $registeage, $gender, $timiming);
 			$success = true;
 		}
 	}

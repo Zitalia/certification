@@ -9,6 +9,10 @@
     margin-top:20vh;
 }
 
+.h60{
+	height:60% !important;
+}
+
 input {
     text-align:center;
 }
@@ -109,6 +113,10 @@ input {
 }
 .width-justify {
 	width:auto;
+}
+
+.margin6{
+	margin-left:7% !important;
 }
 .element {
     margin:auto;
@@ -307,6 +315,10 @@ ul {
 	background-image: url("../img/fondfonlatulipe.jpg");
 }
 
+.incrustation{
+	height:50% !important;
+}
+
 .bordurusmimosa {
 	border-radius:20px 20px;
 }
@@ -352,8 +364,14 @@ ul {
 	margin:auto;
 	padding:auto;
 }
-.cardaarrangerbakde{
+.carddeckkkpourledessousrouge {
 	height:95%;
+	width:90%;
+	margin:auto;
+	padding:auto;
+}
+.cardaarrangerbakde{
+	height:70%;
 	margin-top:0.75em;
 }
 .contenuedecartelalalerje{
@@ -395,6 +413,7 @@ ul {
 	flex:none !important;
 	width:40%;
 	margin:3%;
+	height:75%;
 }
 
 .cartetropstylevideotoutbleu:hover{
@@ -439,11 +458,18 @@ iframe {
 .miniaturebandeau {
 	float:left;
 }
+.miniaturebandeaurouge{
+	float:left;
+	height:70%;
+}
 #cardcontent {
 	height:12vh;
-	border:2px groove black;
+	background-color:rgb(250, 11, 11);
 }
 
+.h70{
+	height:70% !important;
+}
 .borderblack {
 	border:2px groove black;
 	border-radius:20px 20px;
@@ -475,15 +501,6 @@ iframe {
 	color:purple;
 }
 
-.trianglegauchebleu{
-	width:1px;
-	height:1px;
-	border:1px solid #069;
-	border-color:transparent #069 transparent transparent;
-	border-width:9vh;
-    margin-top: 2.5%;
-}
-
 .h-80 {
 	height: 80% !important;
   }
@@ -492,32 +509,6 @@ iframe {
 	height:33vh;
 } */
 
-.triangledroitebleu{
-	width:1px;
-	height:1px;
-	border:1px solid #069;
-	border-color:transparent transparent transparent #069;
-	border-width:9vh;
-    margin-top: 2.5%;
-}
-
-.trianglegaucherouge{
-	width:1px;
-	height:1px;
-	border:1px solid #990000;
-	border-color:transparent #990000 transparent transparent;
-	border-width:9vh;
-    margin-top: 2.5%;
-}
-
-.triangledroiterouge{
-	width:1px;
-	height:1px;
-	border:1px solid #990000;
-	border-color:transparent transparent transparent #990000;
-	border-width:9vh;
-    margin-top: 2.5%;
-}
 
 .alignezverslemilieu {
 	margin-top:2vh;

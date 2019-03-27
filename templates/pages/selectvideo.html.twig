@@ -14,12 +14,12 @@
 {% endblock %}
 
 {% block gaucheun %}
-<div class="h-50 justifyparlehautcettefois textbleu col-sm-6 col-md-12">
+<div class="h-50 justifyparlehautcettefois textbleu col-sm-6 col-md-12 hiddendennaruto">
 	<h4>Vidéo de la semaine :</h4>
-	<ul class="justifyparlehautcettefois padenone">
+	<ul class="justifyparlehautcettefois padenone ">
 		{% for video in vodday %}
         <a href="index.php?routage=videoselected&menuderoulant=videoselected&videoId={{ video.id }} ">
-        <li>{{video.authorname}}</li>
+        <li class="videocardnamelde">{{video.authorname}}</li>
         <li>{{video.name}}</li>
         </a>
         {% endfor %}

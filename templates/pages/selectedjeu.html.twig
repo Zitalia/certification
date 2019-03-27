@@ -65,7 +65,7 @@
 {% endblock %}
 
 {% block content %}
-	<div class="col-md-10 bg-dark margenone padenone" style="overflow:hidden">
+	<div class="col-md-10 bg-dark margenone padenone margin6 h60" style="overflow:hidden">
 		<div id="incrustation" class="col-md-11 h-75  margmid" >
 			<div class="h-10 textrouge">
 			{% for jeux in UrlJeux %}
@@ -77,7 +77,7 @@
 			</div>
 		</div>
 		<div id="bandeaudfilant" class="col-md-11 h-25  margmid" >
-			<div class="card-deck carddeckkkpourledessous">
+			<div class="card-deck carddeckkkpourledessousrouge">
 			<div class="align-right policeepee float-right">
 					<a href="#"><i class="fas fa-thumbs-up textrouge" id="likejeu" data-idjeu="{{jeux.id}}"></i></a>
 					<a href="#"><i class="fas fa-thumbs-down textblanc" id="dislikejeu" data-dislikeid="{{jeux.id}}"></i></a>
@@ -90,8 +90,8 @@
 					<a href="index.php?routage=selectedjeux&menuderoulant=selectedjeux&jeuxId={{ jeux.id }} ">
 						<div class="card-body policeepee contenuedecartelalalerje">
 							<h5 class="borderblack text-center texterouge videonamecardselectedede">{{jeux.name}}</h5>
-							<div class="bg-dark texterouge bordurusmimosa" id="cardcontent">
-								<img src="{{jeux.miniaimg}}" alt="miniature" class="miniaturebandeau bordurusmimolette" height="100%" width="100%">
+							<div class="bg-dark texterouge bordurusmimosa h70" id="cardcontent">
+								<img src="{{jeux.miniaimg}}" alt="miniature" class="miniaturebandeaurouge bordurusmimolette" height="100%" width="100%">
 							</div>
 						</div>
 					</a>

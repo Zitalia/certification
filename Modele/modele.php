@@ -19,15 +19,13 @@ function verifypassword($pwd1, $pwd2){
   }
   return $matchpass; 
 }
-function getUser($pseudo, $pwd) {
+function getUser($pseudo) {
   $bdd = co();
   $req = $bdd->prepare("
   SELECT * 
   FROM user 
-  WHERE name = :name 
-  AND Password = :pwd");
+  WHERE name = :name ");
   $req->bindParam(':name', $pseudo, PDO::PARAM_STR);
-  $req->bindParam(':pwd', $pwd, PDO::PARAM_STR);
   $req->execute();
   return $req;
 }
